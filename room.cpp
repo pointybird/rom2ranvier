@@ -1,4 +1,5 @@
 #include <regex>
+#include <array>
 
 #include <yaml-cpp/yaml.h>
 
@@ -14,7 +15,7 @@ using namespace YAML;
 std::map<int, room_ptr>           room_lookup;
 
 std::array<std::string, 6>        directions = {
-  "north", "east", "south", "west", "up", "down"
+  { "north", "east", "south", "west", "up", "down" }
 };
 
 static std::map<int, std::string> sectors = {
